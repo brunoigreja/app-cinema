@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default function Detalhes(props) {
   return (
-    <View style={styles.modalContainer}>
+    <SafeAreaView  style={styles.modalContainer}>
 
       <View style={styles.modalContainer}>
         <TouchableOpacity style={styles.btnVoltar} onPress={props.voltar}>
@@ -15,7 +16,7 @@ export default function Detalhes(props) {
         <Text style={styles.sinopse}>Sinopse:</Text>
         <Text style={styles.descricao}>{props.filme.sinopse}</Text>
       </View>
-    </View>
+    </SafeAreaView >
   );
 }
 
@@ -29,7 +30,8 @@ const styles = StyleSheet.create({
 
   },
   modalContainer: {
-    // width: 'auto',
+    width: '100%',
+    flex: 1,
     height: '80%',
     backgroundColor: '#121212',
     borderTopLeftRadius: 5,

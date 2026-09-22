@@ -27,7 +27,7 @@ export default function Filmes({ data }) {
           <Detalhes filme={data} voltar={() => setVisibleModal(false)} />
         </Modal>
 
-    </View>
+    </View >
   );
 }
 
@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   capa: {
-    height: 250,
+    height: 300,
+    width: '100%',
     zIndex: 2,
   },
   titulo: {

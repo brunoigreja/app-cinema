@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useEffect, useState } from 'react';
 
 import api from './src/services/api';
@@ -20,21 +21,21 @@ export default function App() {
 
   if (loading) {
     return (
-      <View style={styles.container}>
+      <View  style={styles.container}>
         <ActivityIndicator size="large" color="#0000ff" />
-      </View>
+      </View >
     );
   } else {
 
     return (
-      <View style={styles.container}>
+      <SafeAreaView  style={styles.container}>
         <FlatList
           data={filmes}
           keyExtractor={item => String(item.id)}
           renderItem={({ item }) => <Filmes data={item} />}
         />
-        <StatusBar style="auto" />
-      </View>
+      
+      </SafeAreaView >
     );
   }
 }
