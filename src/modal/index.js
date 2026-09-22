@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 
   },
   modalContainer: {
-    width: 'auto',
+    // width: 'auto',
     height: '80%',
     backgroundColor: '#121212',
     borderTopLeftRadius: 5,

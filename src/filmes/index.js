@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Modal } from 'react-native';
 
-import Detalhes from '../Modal';
+import Detalhes from '../modal';
 
 export default function Filmes({ data }) {
   const [visibleModal, setVisibleModal] = useState(false);
